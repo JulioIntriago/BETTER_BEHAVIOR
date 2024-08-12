@@ -424,13 +424,16 @@ nav {
 .room__card {
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Estilo para las tarjetas de habitación */
+  box-shadow: 5px 5px 10px rgb(176, 191, 203); /* Estilo para las tarjetas de habitación */
 }
+
 
 .room__card__image {
   position: relative;
   isolation: isolate; /* Estilo para las imágenes dentro de las tarjetas de habitación */
 }
+/* Cambiar el color de los títulos dentro de las tarjetas en la sección de habitaciones */
+
 
 .room__card__icons {
   position: absolute;
@@ -475,7 +478,7 @@ nav {
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
   font-weight: 500;
-  color: var(--text-dark); /* Estilo para el título de la tarjeta */
+  color: var(--primary-color); /* Estilo para el título de la tarjeta */
 }
 
 .room__card p {
