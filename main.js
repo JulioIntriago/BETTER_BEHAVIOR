@@ -1,24 +1,29 @@
-const menuBtn = document.getElementById("menu-btn");
-const navLinks = document.getElementById("nav-links");
-const menuBtnIcon = menuBtn.querySelector("i");
+document.getElementById('booking-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Previene el envío del formulario
 
-menuBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("open");
+  // Captura los valores del formulario
+  const sessionDate = document.getElementById('session-date').value;
+  const sessionTime = document.getElementById('session-time').value;
+  const sessionType = document.getElementById('session-type').value;
 
-  const isOpen = navLinks.classList.contains("open");
-  menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
+  // Define el número de WhatsApp al que se enviará el mensaje
+  const phoneNumber = '+593989253675'; // Reemplaza con el número de teléfono (incluye código de país, pero sin el signo +)
+
+  // Crea el mensaje
+  const message = `Hello, I would like to schedule a session.\nDate: ${sessionDate}\nHour: ${sessionTime}\nType of Inquiry: ${sessionType}`;
+
+  // Codifica el mensaje en URI
+  const encodedMessage = encodeURIComponent(message);
+
+  // Crea la URL de WhatsApp
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+  // Redirige a la URL de WhatsApp
+  window.open(whatsappURL, '_blank');
 });
 
-navLinks.addEventListener("click", () => {
-  navLinks.classList.remove("open");
-  menuBtnIcon.setAttribute("class", "ri-menu-line");
-});
 
-const scrollRevealOption = {
-  distance: "50px",
-  origin: "bottom",
-  duration: 1000,
-};
+
 
 // header container
 ScrollReveal().reveal(".header__container p", {
@@ -67,4 +72,11 @@ ScrollReveal().reveal(".service__list li", {
   ...scrollRevealOption,
   interval: 500,
   origin: "right",
+});
+// main.js
+
+
+
+menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
 });

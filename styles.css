@@ -1,24 +1,186 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 :root {
-  --primary-color: #e82574;
-  --primary-color-dark: #bc1c5c;
-  --text-dark: #0c0a09;
-  --text-light: #78716c;
-  --white: #ffffff;
-  --max-width: 1200px;
+  --primary-color: #5AB1B7; /* Color principal de la página */
+  --primary-color-dark: #FFA3A3; /* Color oscuro de acento */
+  --text-dark: #0c0a09; /* Color del texto oscuro */
+  --text-light: #78716c; /* Color del texto claro */
+  --white: #ffffff; /* Color blanco */
+  --max-width: 1200px; /* Ancho máximo de la página */
+
+  --secondary-color: #B3E7CC; /* Nuevo color secundario */
+  --accent-color: #F9D585; /* Nuevo color de acento */
 }
 
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Reseteo básico de estilos */
+}
+/*secion de contacto o formulario en pagina contac*/
+.contact-section {
+  padding: 50px 20px;
+  background-size: cover; /* Hace que la imagen cubra toda la sección */
+  color: #fff; /* Ajusta el color del texto si es necesario */
+}
+/* Estilos para la navegación */
+.nav__links {
+  display: none; /* Ocultar el menú inicialmente */
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #5AB1B7;
+  width: 100%;
+  padding: 10px;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav__links.open {
+  display: flex;/* Mostrar el menú cuando está abierto */
+  transform: translateY(0);
+}
+
+.nav__links a {
+  color: #fff; /* Blanco para los enlaces */
+  margin-right: 20px;
+}
+
+.nav__links a:hover {
+  color: #ffc107; /* Cambia el color al pasar el mouse */
+}
+
+.nav__btn {
+  background-color: #5AB1B7; /* Botón amarillo */
+  color: #e6ecf3;
+}
+.nav__menu__btn {
+  display: none; /* Oculto por defecto */
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #fff;
+}
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 768px) {
+  .nav__links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: #5AB1B7;
+      width: 100%;
+      padding: 10px;
+  }
+
+  .nav__links.open {
+      display: flex;/* Mostrar el menú como flex en móviles */
+      transform: translateY(0);
+
+  }
+
+  .nav__links a {
+      margin: 10px 0;
+      text-align: center;
+  }
+
+  .nav__menu__btn {
+      display: block; /* Mostrar botón de hamburguesa en móviles */
+  }
+}
+
+.aba-section {
+  background-color: var(--white); /* Fondo blanco */
+  padding: 40px 20px;
+  color: var(--text-dark); /* Color del texto oscuro */
+}
+
+.section__header {
+  font-size: 2rem;
+  color: var(--primary-color); /* Color principal */
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.aba-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.aba-list li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  font-size: 1.125rem;
+  color: var(--text-dark); /* Color del texto de las listas */
+}
+
+.aba-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color); /* Color del check */
+  font-size: 1.25rem;
+}
+
+.aba-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-light); /* Color del texto de las descripciones */
+  margin-bottom: 30px;
+}
+
+/* Contenedor general de la sección */
+.natural__environment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+}
+
+/* Contenedor del texto */
+.natural__environment__content {
+  flex: 1;
+  padding-right: 20px;
+}
+
+/* Encabezado */
+.natural__environment__header {
+  font-size: 2.5rem;
+  color: #090909; /* Color similar al usado en la imagen */
+  margin-bottom: 20px;
+}
+
+/* Texto */
+.natural__environment__text {
+  font-size: 1.125rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Contenedor de la imagen */
+.natural__environment__image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Imagen */
+.natural__environment__image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .section__container {
   max-width: var(--max-width);
   margin: auto;
-  padding: 5rem 1rem;
+  padding: 5rem 1rem; /* Margen interno y externo para las secciones */
 }
 
 .section__subheader {
@@ -26,7 +188,7 @@
   position: relative;
   font-weight: 500;
   letter-spacing: 2px;
-  color: var(--text-dark);
+  color: var(--text-dark); /* Estilo para los subtítulos de las secciones */
 }
 
 .section__subheader::after {
@@ -36,7 +198,7 @@
   transform: translate(1rem, -50%);
   height: 2px;
   width: 4rem;
-  background-color: var(--primary-color);
+  background-color: var(--primary-color); /* Línea decorativa bajo el subtítulo */
 }
 
 .section__header {
@@ -45,13 +207,13 @@
   font-size: 2.5rem;
   font-weight: 600;
   line-height: 3rem;
-  color: var(--text-dark);
+  color: var(--text-dark); /* Estilo para los títulos de las secciones */
 }
 
 .section__description {
   max-width: 600px;
   margin-bottom: 1rem;
-  color: var(--text-light);
+  color: var(--text-light); /* Estilo para las descripciones de las secciones */
 }
 
 .btn {
@@ -64,50 +226,55 @@
   background-color: var(--primary-color);
   border-radius: 5px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3s; /* Estilos para los botones */
 }
 
 .btn:hover {
-  background-color: var(--primary-color-dark);
+  background-color: var(--accent-color); /* Efecto hover para los botones */
 }
+.btn .ri-phone-line {
+  margin-right: 8px; /* Espacio entre el icono y el texto */
+}
+
 
 img {
   width: 100%;
-  display: flex;
+  display: flex; /* Imagenes adaptables al contenedor */
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none; /* Eliminación del subrayado en los enlaces */
 }
 
 .logo {
-  max-width: 120px;
+  max-width: 120px; /* Estilo para el logo */
 }
 
 html,
 body {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* Suavizado del scroll */
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif; /* Tipografía principal del sitio */
 }
 
 .header {
-  background-image: url("assets/header.jpg");
+  background-image: url("assets/hero4.PNG");
   background-position: center center;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; /* Estilo para el header con imagen de fondo */
 }
 
 nav {
   position: fixed;
   isolation: isolate;
-  top: 0;
+  top: -10px;
   width: 100%;
   max-width: var(--max-width);
   margin: auto;
   z-index: 9;
+  background-color: rgba(255, 255, 200, 0); /* Color semitransparente para el navbar */
 }
 
 .nav__bar {
@@ -116,13 +283,13 @@ nav {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  background-color: var(--primary-color);
+  background-color: var(--primary-color); /* Estilo de la barra de navegación */
 }
 
 .nav__menu__btn {
   font-size: 1.5rem;
   color: var(--white);
-  cursor: pointer;
+  cursor: pointer; /* Estilo del botón de menú */
 }
 
 .nav__links {
@@ -134,14 +301,14 @@ nav {
   align-items: center;
   flex-direction: column;
   gap: 2rem;
-  background-color: rgba(188, 28, 92, 0.9);
+  background-color: #61706e;
   transform: translateY(-100%);
   transition: 0.5s;
-  z-index: -1;
+  z-index: -1; /* Estilo del menú desplegable de la navegación */
 }
 
 .nav__links.open {
-  transform: translateY(0);
+  transform: translateY(0); /* Estilo para el menú cuando está abierto */
 }
 
 .nav__links a {
@@ -149,15 +316,15 @@ nav {
   isolation: isolate;
   padding-bottom: 8px;
   color: var(--white);
-  transition: 0.3s;
+  transition: 0.3s; /* Estilo de los enlaces del menú */
 }
 
 .nav__btn {
-  display: none;
+  display: none; /* Botón de navegación oculto por defecto */
 }
 
 .header__container {
-  padding-block: 10rem 15rem;
+  padding-block: 10rem 15rem; /* Espaciado dentro del contenedor del header */
 }
 
 .header__container p {
@@ -165,7 +332,7 @@ nav {
   font-size: 1.2rem;
   color: var(--white);
   text-align: center;
-  opacity: 0.6;
+  opacity: 0.6; /* Estilo para el texto dentro del header */
 }
 
 .header__container h1 {
@@ -173,15 +340,15 @@ nav {
   font-weight: 500;
   line-height: 4.5rem;
   color: var(--white);
-  text-align: center;
+  text-align: center; /* Estilo para el título dentro del header */
 }
 
 .header__container h1 span {
-  color: var(--primary-color);
+  color: var(--primary-color); /* Color para resaltar una palabra en el título */
 }
 
 .booking__container {
-  padding-block: 0;
+  padding-block: 0; /* Contenedor para la sección de reservas */
 }
 
 .booking__form {
@@ -194,7 +361,7 @@ nav {
   background-color: var(--white);
   border-radius: 10px;
   transform: translateY(-50%);
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1); /* Estilo para el formulario de reservas */
 }
 
 .input__group {
@@ -202,17 +369,17 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 1rem; /* Grupo de inputs dentro del formulario */
 }
 
 .input__group span {
   font-size: 1.75rem;
-  color: var(--primary-color);
+  color: var(--primary-color); /* Iconos dentro de los inputs */
 }
 
 .input__group label {
   font-weight: 500;
-  color: var(--text-dark);
+  color: var(--text-dark); /* Etiquetas de los inputs */
 }
 
 .input__group input {
@@ -223,40 +390,40 @@ nav {
   color: var(--text-dark);
   font-size: 0.9rem;
   outline: none;
-  border: none;
+  border: none; /* Estilo de los inputs */
 }
 
 .input__group input::placeholder {
-  color: var(--text-light);
+  color: var(--text-light); /* Color de los placeholders */
 }
 
 .about__container {
   overflow: hidden;
   display: grid;
-  gap: 2rem;
+  gap: 2rem; /* Estilo para el contenedor de la sección "about" */
 }
 
 .about__image img {
   max-width: 450px;
   margin: auto;
-  border-radius: 5px;
+  border-radius: 5px; /* Estilo de la imagen dentro de la sección "about" */
 }
 
 .room__grid {
   margin-top: 4rem;
   display: grid;
-  gap: 1rem;
+  gap: 1rem; /* Estilo para la disposición de las habitaciones en grid */
 }
 
 .room__card {
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Estilo para las tarjetas de habitación */
 }
 
 .room__card__image {
   position: relative;
-  isolation: isolate;
+  isolation: isolate; /* Estilo para las imágenes dentro de las tarjetas de habitación */
 }
 
 .room__card__icons {
@@ -269,7 +436,7 @@ nav {
   justify-content: flex-end;
   flex-wrap: wrap;
   gap: 1rem;
-  z-index: 1;
+  z-index: 1; /* Estilo para los iconos dentro de las tarjetas de habitación */
 }
 
 .room__card__icons span {
@@ -279,74 +446,73 @@ nav {
   background-color: var(--white);
   border-radius: 100%;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
+  cursor: pointer; /* Estilo para los iconos dentro de las tarjetas */
 }
 
 .room__card__icons span:nth-child(1) {
-  color: #f472b6;
+  color: #f472b6; /* Color para el primer icono */
 }
 
 .room__card__icons span:nth-child(2) {
-  color: #c084fc;
+  color: #c084fc; /* Color para el segundo icono */
 }
 
 .room__card__icons span:nth-child(3) {
-  color: #60a5fa;
+  color: #60a5fa; /* Color para el tercer icono */
 }
 
 .room__card__details {
-  padding: 1rem;
+  padding: 1rem; /* Estilo para los detalles de la tarjeta de habitación */
 }
 
 .room__card h4 {
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
   font-weight: 500;
-  color: var(--text-dark);
+  color: var(--text-dark); /* Estilo para el título de la tarjeta */
 }
 
 .room__card p {
   margin-bottom: 0.5rem;
-  color: var(--text-light);
+  color: var(--text-light); /* Estilo para la descripción de la tarjeta */
 }
 
 .room__card h5 {
   margin-bottom: 1rem;
   font-size: 1rem;
   font-weight: 500;
-  color: var(--text-light);
+  color: var(--text-light); /* Estilo para el precio de la tarjeta */
 }
 
 .room__card h5 span {
   font-size: 1.1rem;
-  color: var(--text-dark);
+  color: var(--text-dark); /* Estilo para resaltar el precio */
 }
 
 .service {
   background-image: url("assets/service.jpg");
   background-position: center center;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; /* Estilo para la sección de servicios */
 }
 
 .service__container {
   padding-block: 0;
   display: grid;
-
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* Disposición en grid para los servicios */
 }
 
 .service__content {
   grid-column: 1/3;
   padding: 2rem 4rem;
-  background-color: var(--white);
+  background-color: var(--white); /* Estilo para el contenido de la sección de servicios */
 }
 
 .service__list {
   list-style: none;
   margin-top: 2rem;
   display: grid;
-  gap: 2rem;
+  gap: 2rem; /* Lista de servicios */
 }
 
 .service__list li {
@@ -355,7 +521,7 @@ nav {
   gap: 1rem;
   font-size: 1.2rem;
   font-weight: 500;
-  color: var(--text-dark);
+  color: var(--text-dark); /* Estilo de los elementos de la lista de servicios */
 }
 
 .service__list span {
@@ -363,27 +529,27 @@ nav {
   font-size: 1.75rem;
   color: var(--text-dark);
   background-color: var(--text-light);
-  border-radius: 100%;
+  border-radius: 100%; /* Estilo para los iconos de la lista de servicios */
 }
 
 .service__list li:nth-child(1) span {
   color: #60a5fa;
-  background-color: #dbeafe;
+  background-color: #dbeafe; /* Color para el primer servicio */
 }
 
 .service__list li:nth-child(2) span {
   color: #f472b6;
-  background-color: #fce7f3;
+  background-color: #fce7f3; /* Color para el segundo servicio */
 }
 
 .service__list li:nth-child(3) span {
   color: #c084fc;
-  background-color: #f3e8ff;
+  background-color: #f3e8ff; /* Color para el tercer servicio */
 }
 
 .service__list li:nth-child(4) span {
   color: #fb7185;
-  background-color: #ffe4e6;
+  background-color: #ffe4e6; /* Color para el cuarto servicio */
 }
 
 .banner__content {
@@ -394,27 +560,85 @@ nav {
   justify-content: space-evenly;
   flex-wrap: wrap;
   border-radius: 10px;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1); /* Estilo para la sección de banner */
 }
 
 .banner__card {
   text-align: center;
-  flex: 1 1 180px;
+  flex: 1 1 180px; /* Estilo para las tarjetas dentro del banner */
 }
 
 .banner__card h4 {
   font-size: 2rem;
   font-weight: 600;
-  color: var(--text-dark);
+  color: var(--text-dark); /* Estilo para el título del banner */
 }
 
 .banner__card p {
-  color: var(--text-light);
+  color: var(--text-light); /* Estilo para la descripción del banner */
+}
+/* Contenedor principal de la sección */
+.six-step-section {
+  padding: 60px 20px;
+  background-color: #f8f9fa; /* Fondo claro para la sección */
+}
+
+/* Contenedor del contenido */
+.six-step-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Encabezado de la sección */
+.six-step-header {
+  font-size: 2.5rem;
+  color: #343a40;
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+
+/* Grid para los elementos */
+.six-step-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Cada ítem de la lista */
+.six-step-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+/* Número de cada paso */
+.six-step-number {
+  font-size: 2rem;
+  color: #5AB1B7; /* Color naranja similar al mostrado en la imagen */
+  font-weight: bold;
+}
+
+/* Título de cada paso */
+.six-step-title {
+  font-size: 1.5rem;
+  color: #343a40;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+/* Descripción de cada paso */
+.six-step-description {
+  font-size: 1rem;
+  color: #6c757d;
+  line-height: 1.6;
 }
 
 .explore :is(.section__subheader, .section__header) {
   text-align: center;
-  margin-inline: auto;
+  margin-inline: auto; /* Centrando los títulos de la sección "explore" */
 }
 
 .explore__bg {
@@ -428,7 +652,7 @@ nav {
   background-image: url("assets/explore.jpg");
   background-position: center center;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; /* Fondo para la sección "explore" */
 }
 
 .explore__content {
@@ -437,11 +661,11 @@ nav {
   padding: 2rem;
   background-color: var(--white);
   border-radius: 5px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Estilo para el contenido de la sección "explore" */
 }
 
 .explore__content p {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem; /* Espaciado para los párrafos dentro de "explore" */
 }
 
 .explore__content h4 {
@@ -449,53 +673,118 @@ nav {
   font-size: 1.2rem;
   font-weight: 600;
   line-height: 1.5rem;
-  color: var(--text-dark);
+  color: var(--text-dark); /* Estilo para los encabezados dentro de "explore" */
 }
 
 .explore__content .btn {
   color: var(--primary-color);
   background-color: var(--white);
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--primary-color); /* Estilo para los botones dentro de "explore" */
 }
 
 .explore__content .btn:hover {
   color: var(--white);
-  background-color: var(--primary-color);
+  background-color: var(--primary-color); /* Estilo hover para los botones dentro de "explore" */
+}
+/*formulario */
+/* Exploratory section background */
+.explore__bg {
+  padding: 40px;
+  background-color: var(--white); /* Secondary color for background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
 }
 
+.explore__content {
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+}
+
+.contact__form .form__group {
+  margin-bottom: 20px;
+}
+
+.contact__form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.contact__form input,
+.contact__form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid var(--primary-color-dark);
+  border-radius: 5px;
+  color: var(--text-dark);
+  background-color: #f9f9f9;
+}
+
+.contact__form input:focus,
+.contact__form textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background-color: #fff;
+}
+
+.contact__form .btn {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact__form .btn:hover {
+  background-color: var(--primary-color-dark);
+}
+
+
 .footer {
-  background-color: var(--text-dark);
+  background-color: var(--text-dark); /* Color de fondo para el pie de página */
 }
 
 .footer__container {
   display: grid;
-  gap: 4rem 2rem;
+  gap: 4rem 2rem; /* Disposición en grid para el contenido del pie de página */
 }
 
 .footer__col .section__description {
-  margin-block: 2rem;
+  margin-block: 2rem; /* Estilo para las descripciones dentro del pie de página */
 }
 
 .footer__col h4 {
   margin-bottom: 2rem;
   font-size: 1.2rem;
   font-weight: 500;
-  color: var(--white);
+  color: var(--white); /* Estilo para los títulos de columnas en el pie de página */
 }
 
 .footer__links {
   list-style: none;
   display: grid;
-  gap: 1rem;
+  gap: 1rem; /* Estilo para la lista de enlaces en el pie de página */
 }
 
 .footer__links a {
   color: var(--text-light);
-  transition: 0.3s;
+  transition: 0.3s; /* Estilo para los enlaces dentro del pie de página */
 }
 
 .footer__links a:hover {
-  color: var(--white);
+  color: var(--white); /* Estilo hover para los enlaces dentro del pie de página */
 }
 
 .footer__socials {
@@ -503,33 +792,33 @@ nav {
   display: flex;
   align-items: center;
   gap: 1rem;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Estilo para los íconos sociales en el pie de página */
 }
 
 .footer__socials img {
   max-width: 25px;
   opacity: 0.8;
-  transition: 0.3s;
+  transition: 0.3s; /* Estilo para las imágenes de íconos sociales */
 }
 
 .footer__socials img:hover {
-  opacity: 1;
+  opacity: 1; /* Estilo hover para las imágenes de íconos sociales */
 }
 
 .footer__bar {
   padding: 1rem;
   font-size: 0.9rem;
   color: var(--text-light);
-  text-align: center;
+  text-align: center; /* Estilo para la barra de derechos reservados en el pie de página */
 }
 
 @media (width > 576px) {
   .room__grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Disposición de habitaciones en pantallas más grandes */
   }
 
   .footer__container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Disposición del pie de página en pantallas medianas */
   }
 }
 
@@ -539,16 +828,16 @@ nav {
     position: static;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Estilo para la navegación en pantallas más grandes */
   }
 
   .nav__bar {
     padding: 0;
-    background-color: transparent;
+    background-color: transparent; /* Elimina el fondo de la barra de navegación en pantallas grandes */
   }
 
   .nav__menu__btn {
-    display: none;
+    display: none; /* Oculta el botón de menú en pantallas grandes */
   }
 
   .nav__links {
@@ -557,11 +846,11 @@ nav {
     position: static;
     transform: none;
     flex-direction: row;
-    background-color: transparent;
+    background-color: transparent; /* Estilo para los enlaces de navegación en pantallas grandes */
   }
 
   .nav__btn {
-    display: block;
+    display: block; /* Muestra el botón de navegación en pantallas grandes */
   }
 
   .nav__links a::after {
@@ -573,33 +862,33 @@ nav {
     width: 0;
     background-color: var(--primary-color);
     transition: 0.3s;
-    transform-origin: left;
+    transform-origin: left; /* Estilo para el subrayado de los enlaces de navegación en pantallas grandes */
   }
 
   .nav__links a:hover::after {
-    width: 100%;
+    width: 100%; /* Expande el subrayado al hacer hover sobre los enlaces de navegación */
   }
 
   .about__container {
     grid-template-columns: repeat(2, 1fr);
-    align-items: center;
+    align-items: center; /* Disposición en grid para la sección "about" en pantallas grandes */
   }
 
   .room__grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* Disposición de habitaciones en tres columnas en pantallas grandes */
   }
 
   .service__content {
-    grid-column: 2/3;
+    grid-column: 2/3; /* Ajuste del contenido de servicios en pantallas grandes */
   }
 
   .footer__container {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr); /* Disposición en grid de cuatro columnas para el pie de página en pantallas grandes */
   }
 }
 
 @media (width > 1024px) {
   .room__grid {
-    gap: 2rem;
+    gap: 2rem; /* Mayor espaciado entre las habitaciones en pantallas más grandes */
   }
 }

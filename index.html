@@ -8,253 +8,369 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <title>Web Design Mastery | Rayal Park</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Better Behavior Services</title>
   </head>
   <body>
     <header class="header">
       <nav>
         <div class="nav__bar">
           <div class="logo">
-            <a href="#"><img src="assets/logo.png" alt="logo" /></a>
+            <a href="#"><img src="assets/logo.webp" alt="logo" /></a>
           </div>
           <div class="nav__menu__btn" id="menu-btn">
             <i class="ri-menu-line"></i>
           </div>
         </div>
         <ul class="nav__links" id="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#service">Services</a></li>
-          <li><a href="#explore">Explore</a></li>
+          <li><a href="#home">Home Based</a></li>
+          <li><a href="#school">School Based</a></li>
+          <li><a href="#parent">Parent Training</a></li>
+          <li><a href="#process">Our Process</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <button class="btn nav__btn">Book Now</button>
-      </nav>
+        <a href="#form">
+          <button class="btn nav__btn"><i class="bi bi-check2-circle"></i> Free Consultation</button>
+          
+        </a>
+              </nav>
       <div class="section__container header__container" id="home">
-        <p>Simple - Unique - Friendly</p>
-        <h1>Make Yourself At Home<br />In Our <span>Hotel</span>.</h1>
+        <p>Better Behavior Services LLC</p>
+        <h1>Creating Positive Change<br/>By <span> Behavior</span>.</h1>
       </div>
     </header>
+            <!-- Selección de la fecha de la sesión -->
 
     <section class="section__container booking__container">
-      <form action="/" class="booking__form">
+      <form id="booking-form" class="booking__form">
         <div class="input__group">
           <span><i class="ri-calendar-2-fill"></i></span>
           <div>
-            <label for="check-in">CHECK-IN</label>
-            <input type="text" placeholder="Check In" />
+            <label for="session-date">Fecha de la Sesión</label>
+            <input type="date" id="session-date" name="session_date" placeholder="Selecciona la fecha" required />
           </div>
         </div>
+        <!-- Selección de la hora de la sesión -->
         <div class="input__group">
-          <span><i class="ri-calendar-2-fill"></i></span>
+          <span><i class="ri-time-fill"></i></span>
           <div>
-            <label for="check-out">CHECK-OUT</label>
-            <input type="text" placeholder="Check Out" />
+            <label for="session-time">Hora de la Sesión</label>
+            <input type="time" id="session-time" name="session_time" placeholder="Selecciona la hora" required />
           </div>
         </div>
+        <!-- Selección del tipo de consulta -->
         <div class="input__group">
-          <span><i class="ri-user-fill"></i></span>
+          <span><i class="ri-user-heart-fill"></i></span>
           <div>
-            <label for="guest">GUEST</label>
-            <input type="text" placeholder="Guest" />
+            <label for="session-type">Tipo de Consulta</label>
+            <select id="session-type" name="session_type" required>
+              <option value="" disabled selected>Selecciona el tipo de consulta</option>
+              <option value="individual">Individual</option>
+              <option value="pareja">Pareja</option>
+              <option value="familiar">Familiar</option>
+              <option value="virtual">Virtual</option>
+            </select>
           </div>
         </div>
+        <!-- Botón para agendar la sesión -->
         <div class="input__group input__btn">
-          <button class="btn">CHECH OUT</button>
+          <button class="btn" type="submit">Schedule</button>
         </div>
       </form>
     </section>
+    
+        <!-------seccion benefits---------------------------------------->
 
-    <section class="section__container about__container" id="about">
+
+    <section class="section__container about__container" id="familiar">
       <div class="about__image">
-        <img src="assets/about.jpg" alt="about" />
+        <img src="assets/betterhome.PNG" alt="about" />
       </div>
       <div class="about__content">
-        <p class="section__subheader">ABOUT US</p>
-        <h2 class="section__header">The Best Holidays Start Here!</h2>
+        <p class="section__subheader">Benefits of Home-Based ABA Therapy</p>
+        <h2 class="section__header">Familiar Environment</h2>
         <p class="section__description">
-          With a focus on quality accommodations, personalized experiences, and
-          seamless booking, our platform is dedicated to ensuring that every
-          traveler embarks on their dream holiday with confidence and
-          excitement.
+          Perhaps the most valuable part of home-based ABA therapy is how comfortable your child will be with autism treatment right from the get-go. While we ensure your child is perfectly comfortable and secure in our center, there’s nothing like being in the comfort of your own home.
+
+Because your child is in their natural environment at home, their BCBA can observe their behavior and get a good feel for how their typical day goes. And because your child gets to meet with their therapist or our team members in a comfortable and safe space, they may be more apt to cooperate quickly. Home-based ABA therapy also eliminates distraction and any need to adapt to a new space.
         </p>
-        <div class="about__btn">
-          <button class="btn">Read More</button>
-        </div>
+        
       </div>
     </section>
 
-    <section class="section__container room__container">
-      <p class="section__subheader">OUR LIVING ROOM</p>
-      <h2 class="section__header">The Most Memorable Rest Time Starts Here.</h2>
+    <!-------seccion convinence-->
+    <section class="section__container about__container" id="convinence">
+      <div class="about__image">
+        <img src="assets/betterhome2.PNG" alt="about" />
+      </div>
+      <div class="about__content">
+        <h2 class="section__header">Convinence</h2>
+        <p class="section__description">
+          Another great benefit of home-based ABA therapy is the fact 
+          that you don’t have to go anywhere to get the autism therapy your 
+          child needs! Our BCBA comes right to your door, 
+          eliminating the possible struggles you might have if you had to transition from home to a new environment.
+Your child’s ABA therapy appointments are scheduled to meet your needs. And because you stay right where you are, the rest of your family’s schedule remains uninterrupted.
+        </p>
+        
+      </div>
+    </section>
+<!---------------------seccion Basada en la Escuela------------- -->
+    <section class="section__container room__container " id="school">
+      <p class="section__subheader">School Based</p>
+      <h2 class="section__header">School Based ABA Therapy.</h2>
+      <p>
+        ABA therapy in the school setting works through collaboration between ABA therapists, parents, teachers, and guidance counselors. Your child’s ABA therapist will work with you to understand the child’s unique needs, goals, and preferences. Using this information, your child’s ABA therapist will implement effective ABA techniques through the use of positive reinforcement during your child’s school day.
+
+Therapists will also partner with teachers and other school staff to ensure a holistic approach to support inside the classroom and other school settings, like recess and lunch. By sharing insight and strategies, ABA therapists foster a cohesive team environment that helps in the generalization of skills throughout your child’s academic career.
+      </p>
       <div class="room__grid">
         <div class="room__card">
           <div class="room__card__image">
-            <img src="assets/room-1.jpg" alt="room" />
-            <div class="room__card__icons">
-              <span><i class="ri-heart-fill"></i></span>
-              <span><i class="ri-paint-fill"></i></span>
-              <span><i class="ri-shield-star-line"></i></span>
-            </div>
+            <img src="assets/pairing.PNG" alt="room" />
+          
           </div>
           <div class="room__card__details">
-            <h4>Deluxe Ocean View</h4>
-            <p>
-              Bask in luxury with breathtaking ocean views from your private
-              suite.
-            </p>
-            <h5>Starting from <span>$299/night</span></h5>
-            <button class="btn">Book Now</button>
+            <h4>Pairing</h4>
+            <p>Pairing is an essential aspect of our school-based ABA therapy, as it helps build a positive and trusting relationship between the child and ABA therapist. Through the process of pairing, your child’s therapist strives to establish themselves as a reliable and enjoyable presence at school. This involves engaging in conversation and activities that the child finds reinforcing. Pairing not only enhances your child’s engagement and cooperation, but also lays the foundation for effective teaching and intervention.</p>
           </div>
         </div>
         <div class="room__card">
           <div class="room__card__image">
-            <img src="assets/room-2.jpg" alt="room" />
-            <div class="room__card__icons">
-              <span><i class="ri-heart-fill"></i></span>
-              <span><i class="ri-paint-fill"></i></span>
-              <span><i class="ri-shield-star-line"></i></span>
-            </div>
+            <img src="assets/individualize.png" alt="room" />
           </div>
           <div class="room__card__details">
-            <h4>Executive Cityscape Room</h4>
+            <h4>Individualized Attention</h4>
             <p>
-              Experience urban elegance and modern comfort in the heart of the
-              city.
+              Within the school setting, ABA therapists offer targeted support to enhance academic performance, develop social skills, and address problem behaviors. They work closely with your child, tailoring instruction to their unique learning style and abilities, ensuring that academic progress is met.
+
+Additionally, therapists focus on promoting social skills by facilitating interactions with peers, teaching appropriate social cues and norms, and fostering friendships. Lastly, ABA therapists address problem behaviors, like tantrums, by utilizing evidence-based strategies to identify the underlying causes and implement effective coping skills.
             </p>
-            <h5>Starting from <span>$199/night</span></h5>
-            <button class="btn">Book Now</button>
           </div>
         </div>
         <div class="room__card">
           <div class="room__card__image">
-            <img src="assets/room-3.jpg" alt="room" />
-            <div class="room__card__icons">
-              <span><i class="ri-heart-fill"></i></span>
-              <span><i class="ri-paint-fill"></i></span>
-              <span><i class="ri-shield-star-line"></i></span>
-            </div>
+            <img src="assets/skillindividualize.PNG" alt="room" />
           </div>
           <div class="room__card__details">
-            <h4>Family Garden Retreat</h4>
+            <h4>Skill Acquisition</h4>
             <p>
-              Spacious and inviting, perfect for creating cherished memories
-              with loved ones.
+              ABA therapists utilize a range of ABA strategies in the classroom to support skill acquisition within the school setting. These techniques may include Discrete Trial Training (DTT), which breaks down skills into smaller, manageable steps and uses repetition and reinforcement to promote learning.
+
+Therapists also use naturalistic teaching strategies,
+such as pivotal response teaching (PRT), which focuses on overall development of communication,
+social skills, and independence over individual behaviors. Finally, ABA therapists may utilize positive reinforcement strategies, like token economy, 
+to increase motivation for positive behaviors like cleaning up and working quietly.
             </p>
-            <h5>Starting from <span>$249/night</span></h5>
-            <button class="btn">Book Now</button>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="service" id="service">
-      <div class="section__container service__container">
-        <div class="service__content">
-          <p class="section__subheader">SERVICES</p>
-          <h2 class="section__header">Strive Only For The Best.</h2>
-          <ul class="service__list">
-            <li>
-              <span><i class="ri-shield-star-line"></i></span>
-              High Class Security
-            </li>
-            <li>
-              <span><i class="ri-24-hours-line"></i></span>
-              24 Hours Room Service
-            </li>
-            <li>
-              <span><i class="ri-headphone-line"></i></span>
-              Conference Room
-            </li>
-            <li>
-              <span><i class="ri-map-2-line"></i></span>
-              Tourist Guide Support
-            </li>
-          </ul>
-        </div>
+<!--------------------------secccioon natural -------------------------------------------------------->
+<section class="section__container natural__environment" id="parent">
+  <div class="natural__environment__content">
+    <h2 class="natural__environment__header">NATURAL ENVIRONMENT TEACHING</h2>
+    <p class="natural__environment__text">
+      Your child will follow a designated treatment plan based on the natural school environment, encompassing skills like asking appropriate questions and sitting at a table or desk. Your child’s ABA therapist will adapt their strategies and techniques based on the specific challenges and goals of the child they are supporting. This flexibility allows therapists to address immediate concerns, reinforce positive behaviors, and promote skill acquisition in real-time.
+    </p>
+  </div>
+  <div class="natural__environment__image">
+    <img src="/assets/Naturals.PNG" alt="Child learning in a natural environment">
+  </div>
+</section>
+
+<!----------------------seccion de seis pasos ---------------------------------------------------->
+<section class="six-step-section" id="process">
+  <div class="six-step-container">
+    <h2 class="six-step-header">Highlighting the Process <br> Our Six Step Solution</h2>
+    <div class="six-step-grid">
+      <div class="six-step-item">
+        <div class="six-step-number">01</div>
+        <h3 class="six-step-title">Receive a Diagnosis</h3>
+        <p class="six-step-description">A diagnosis of ASD prescribed by a medical doctor (MD) or PhD is required before receiving ABA therapy covered by insurance.</p>
       </div>
-    </section>
+      <div class="six-step-item">
+        <div class="six-step-number">02</div>
+        <h3 class="six-step-title">Intake</h3>
+        <p class="six-step-description">When you contact Illuminate, we will take your insurance information and immediately begin the process of getting authorization for ABA services.</p>
+      </div>
+      <div class="six-step-item">
+        <div class="six-step-number">03</div>
+        <h3 class="six-step-title">Initial Assessment</h3>
+        <p class="six-step-description">Our clinical team assesses your child’s strengths and weaknesses to develop an individualized treatment plan.</p>
+      </div>
+      <div class="six-step-item">
+        <div class="six-step-number">04</div>
+        <h3 class="six-step-title">Working with your Child</h3>
+        <p class="six-step-description">Our services are delivered by a combination of experienced Board Certified Behavior Analysts (BCBA) and highly devoted Behavior Technicians (BTs).</p>
+      </div>
+      <div class="six-step-item">
+        <div class="six-step-number">05</div>
+        <h3 class="six-step-title">Coordinate Care</h3>
+        <p class="six-step-description">To ensure generalization of skills in school and across therapeutic settings, we coordinate and collaborate with members of your child’s team.</p>
+      </div>
+      <div class="six-step-item">
+        <div class="six-step-number">06</div>
+        <h3 class="six-step-title">Progress and Results</h3>
+        <p class="six-step-description">Through data analysis and direct supervision, we monitor your child’s progress and provide ongoing support.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!------------------------------------------------------------------------------>
+<section class="aba-section">
+  <div class="section__container">
+      <h2 class="section__header">ABA techniques are used to:</h2>
+      <ul class="aba-list">
+          <li>Build Communication and Language Skills</li>
+          <li>Increase Social/Emotional Skills</li>
+          <li>Improve Adaptive Daily Living Skills</li>
+          <li>Reduce Problem Behavior</li>
+      </ul>
+      <p class="aba-description">
+          ABA uses effective strategies of positive reinforcement and understanding antecedents and consequences to increase and/or decrease behaviors. Skills include but are not limited to language development, play and leisure skills, peer interactions, learning and academic skills, and problem behaviors. (e.g., aggression). ABA therapy emphasizes positive social interactions, motivates learning, and improves the quality of life for individuals with autism and their families.
+      </p>
+  </div>
+  <div class="section__container">
+      <h2 class="section__header">Individualized ABA Services include:</h2>
+      <ul class="aba-list">
+          <li>Intake and comprehensive skills assessment</li>
+          <li>Customized treatment plan</li>
+          <li>Behavior intervention plan</li>
+          <li>One on one ABA therapy</li>
+          <li>Supervision and consultation</li>
+          <li>Parent Training</li>
+          <li>Coordination of care with other professionals</li>
+          <li>Coordination of care with school</li>
+      </ul>
+      <p class="aba-description">
+          Having a child diagnosed with ASD can be challenging and frustrating at times. We are dedicated to working together with you to ease your stress and create a brighter future for your family.
+      </p>
+  </div>
+</section>
+
+    <!-------------------------------------banner-------------------------------------------------->
 
     <section class="section__container banner__container">
       <div class="banner__content">
-        <div class="banner__card">
-          <h4>25+</h4>
-          <p>Properties Available</p>
-        </div>
-        <div class="banner__card">
-          <h4>350+</h4>
-          <p>Bookings Completed</p>
-        </div>
-        <div class="banner__card">
-          <h4>600+</h4>
-          <p>Happy Customers</p>
-        </div>
+          <div class="banner__card">
+              <h4>25+</h4>
+              <p>ABA Sessions Completed</p>
+          </div>
+          <div class="banner__card">
+              <h4>10+</h4>
+              <p>Therapists Available</p>
+          </div>
+          <div class="banner__card">
+              <h4>100+</h4>
+              <p>Families Supported</p>
+          </div>
       </div>
-    </section>
-
-    <section class="explore" id="explore">
-      <p class="section__subheader">EXPLORE</p>
-      <h2 class="section__header">What's New Today.</h2>
-      <div class="explore__bg">
-        <div class="explore__content">
-          <p class="section__description">10th MAR 2023</p>
-          <h4>A New Menu Is Available In Our Hotel.</h4>
-          <button class="btn">Continue</button>
+  </section>
+  
+<!------------------------------seccion del formulario--------------------------------------------------------------------->
+<section class="explore" id="form">
+  <p class="section__subheader">Contact us</p>
+  <h2 class="section__header">Have any questions or want more information?<br> Send us a message.</h2>
+  <div class="explore__bg">
+    <div class="explore__content">
+      <form id="contact-form" class="contact__form">
+        <div class="form__group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required />
         </div>
-      </div>
-    </section>
+        <div class="form__group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Your Email" required />
+        </div>
+        <div class="form__group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+        </div>
+        <div class="form__group">
+          <button type="submit" class="btn">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
 
+<!-----------------------------seccion del footer------------------------------------------>
     <footer class="footer" id="contact">
       <div class="section__container footer__container">
         <div class="footer__col">
           <div class="logo">
-            <a href="#home"><img src="assets/logo.png" alt="logo" /></a>
+            <a href="#home"><img src="assets/logo3.PNG" alt="logo" /></a>
           </div>
           <p class="section__description">
-            Discover a world of comfort, luxury, and adventure as you explore
-            our curated selection of hotels, making every moment of your getaway
-            truly extraordinary.
+            We specialize in offering early interventions for behavioral 
+            and developmental conditions such as autism spectrum disorder 
+            (ASD) and attention deficit disorder (ADHD) in Florida. We are 
+            truly passionate about what we do.
           </p>
-          <button class="btn">Book Now</button>
         </div>
         <div class="footer__col">
           <h4>QUICK LINKS</h4>
           <ul class="footer__links">
-            <li><a href="#">Browse Destinations</a></li>
-            <li><a href="#">Special Offers & Packages</a></li>
-            <li><a href="#">Room Types & Amenities</a></li>
-            <li><a href="#">Customer Reviews & Ratings</a></li>
-            <li><a href="#">Travel Tips & Guides</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#school">school-based</a></li>
+            <li><a href="#parent">Parent Training</a></li>
+            <li><a href="#process">Our Process</a></li>
           </ul>
         </div>
         <div class="footer__col">
           <h4>OUR SERVICES</h4>
           <ul class="footer__links">
-            <li><a href="#">Concierge Assistance</a></li>
-            <li><a href="#">Flexible Booking Options</a></li>
-            <li><a href="#">Airport Transfers</a></li>
-            <li><a href="#">Wellness & Recreation</a></li>
+            <li><a href="#">In-Home Therapy</a></li>
+            <li><a href="#">Behavioral Assessments</a></li>
+            <li><a href="#">Social Skills Groups</a></li>
+            
           </ul>
         </div>
         <div class="footer__col">
           <h4>CONTACT US</h4>
           <ul class="footer__links">
-            <li><a href="#">rayalpark@info.com</a></li>
+            <li><a href="#">betterbehaviorservicescll@gmail.com</a></li>
           </ul>
           <div class="footer__socials">
-            <a href="#"><img src="assets/facebook.png" alt="facebook" /></a>
-            <a href="#"><img src="assets/instagram.png" alt="instagram" /></a>
-            <a href="#"><img src="assets/youtube.png" alt="youtube" /></a>
-            <a href="#"><img src="assets/twitter.png" alt="twitter" /></a>
+            <a href="https://www.facebook.com/share/GgaY4b4MUft7oKH8/?mibextid=LQQJ4d"><img src="assets/facebook.png" alt="facebook" /></a>
+            <a href="https://www.instagram.com/betterbehaviorservices?igsh=NW93dXozdzB2bHc1"><img src="assets/instagram.png" alt="instagram" /></a>
+            
           </div>
         </div>
       </div>
       <div class="footer__bar">
-        Copyright © 2023 Web Design Mastery. All rights reserved.
+        Copyright © 2024 Better Behavior Services CLL.<br>
+         All rights reserved.
       </div>
     </footer>
 
+    <!-- Unificación de JavaScript -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      // Código JavaScript para manejar el menú hamburguesa
+      const menuBtn = document.getElementById("menu-btn");
+      const navLinks = document.getElementById("nav-links");
+      const menuBtnIcon = menuBtn.querySelector("i");
+
+      menuBtn.addEventListener("click", () => {
+        // Toggling the menu visibility
+        navLinks.classList.toggle("open");
+
+        // Cambia el ícono del menú dependiendo del estado (abierto/cerrado)
+        const isOpen = navLinks.classList.contains("open");
+        menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
+      });
+
+      // Evento para cerrar el menú al hacer clic en cualquier enlace del menú
+      navLinks.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuBtnIcon.setAttribute("class", "ri-menu-line");
+      });
+    </script>
   </body>
 </html>
