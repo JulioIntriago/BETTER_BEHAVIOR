@@ -588,6 +588,20 @@ nav {
   padding: 60px 20px;
   background-color: #f8f9fa; /* Fondo claro para la sección */
 }
+.six-step-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.six-step-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
 
 /* Contenedor del contenido */
 .six-step-container {
