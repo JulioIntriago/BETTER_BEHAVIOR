@@ -727,7 +727,7 @@ nav {
   background-color: var(--white);
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(8, 8, 8, 0.336); /* Ajuste de la sombra */
   max-width: 600px;
   width: 100%;
 }
