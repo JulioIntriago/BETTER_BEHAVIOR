@@ -4,7 +4,7 @@
   --primary-color: #5AB1B7; /* Color principal de la página */
   --primary-color-dark: #FFA3A3; /* Color oscuro de acento */
   --text-dark: #0c0a09; /* Color del texto oscuro */
-  --text-light: #78716c; /* Color del texto claro */
+  --text-light: #f7f1ed; /* Color del texto claro */
   --white: #ffffff; /* Color blanco */
   --max-width: 1200px; /* Ancho máximo de la página */
 
@@ -759,7 +759,7 @@ nav {
 
 
 .footer {
-  background-color: var(--text-dark); /* Color de fondo para el pie de página */
+  background-color: var(--primary-color); /* Color de fondo para el pie de página */
 }
 
 .footer__container {
@@ -790,7 +790,7 @@ nav {
 }
 
 .footer__links a:hover {
-  color: var(--white); /* Estilo hover para los enlaces dentro del pie de página */
+  color: var(--accent-color); /* Estilo hover para los enlaces dentro del pie de página */
 }
 
 .footer__socials {
