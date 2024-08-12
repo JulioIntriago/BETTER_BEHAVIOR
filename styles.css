@@ -23,6 +23,17 @@
   color: #fff; /* Ajusta el color del texto si es necesario */
 }
 
+nav {
+  position: fixed;
+  isolation: isolate;
+  top: -10px;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: auto;
+  z-index: 9;
+  background-color: rgba(172, 172, 47, 0.596); /* Color semitransparente para el navbar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.685); /* Añade sombra al navbar */
+}
 
 /* Estilos para la navegación */
 .nav__links {
@@ -586,36 +597,75 @@ nav {
 .banner__card p {
   color: var(--text-light); /* Estilo para la descripción del banner */
 }
-/* Contenedor principal de la sección */
 .six-step-section {
   padding: 60px 20px;
-  background-color: #f8f9fa; /* Fondo claro para la sección */
+  background-color: #f8f9fa;
 }
+
+/* Contenedor principal para el grid */
+.six-step-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
+  gap: 20px;
+  justify-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
 .six-step-item {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
 }
 
 .six-step-item:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-/* Responsive layout */
+
+/* Responsive layout para pantallas medianas */
 @media (max-width: 992px) {
   .six-step-grid {
-    grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns for medium screens */
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
   }
 }
 
+/* Responsive layout para pantallas pequeñas */
 @media (max-width: 768px) {
   .six-step-grid {
-    grid-template-columns: 1fr; /* Stack items in one column on small screens */
+    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
   }
 }
+
+/* Responsive layout para pantallas muy pequeñas */
+@media (max-width: 576px) {
+  .six-step-item {
+    padding: 15px; /* Reducir el padding en pantallas muy pequeñas */
+  }
+}
+
+.six-step-number {
+  font-size: 2rem;
+  color: #5AB1B7;
+  font-weight: bold;
+}
+
+.six-step-title {
+  font-size: 1.5rem;
+  color: #343a40;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.six-step-description {
+  font-size: 1rem;
+  color: #6c757d;
+  line-height: 1.6;
+}
+
 
 /* Contenedor del contenido */
 .six-step-container {
@@ -635,7 +685,7 @@ nav {
 /* Grid para los elementos */
 .six-step-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Tres columnas */
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas */
   gap: 20px;
   justify-items: center; /* Center the items horizontally */
   margin: 0 auto; /* Center the grid container */
@@ -650,8 +700,8 @@ nav {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: left;
-  max-width: 300px; /* Limitar el ancho de las tarjetas */
-  width: 100%; /* Ensure the item takes full width */
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
 
 }
