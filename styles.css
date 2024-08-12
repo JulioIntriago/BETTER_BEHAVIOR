@@ -7,8 +7,7 @@
   --text-light: #181615; /* Color del texto claro */
   --white: #ffffff; /* Color blanco */
   --max-width: 1200px; /* Ancho máximo de la página */
-
-  --secondary-color: #B3E7CC; /* Nuevo color secundario */
+  --secondary-color: #d4e0daef; /* Nuevo color secundario */
   --accent-color: #F9D585; /* Nuevo color de acento */
 }
 
@@ -49,7 +48,7 @@
 
 
 .nav__links a {
-  color: #fff; /* Blanco para los enlaces */
+  color: #B3E7CC; /* Blanco para los enlaces */
   margin-right: 20px;
 }
 
@@ -320,9 +319,13 @@ nav {
 .nav__links a {
   position: relative;
   isolation: isolate;
-  padding-bottom: 8px;
-  color: var(--white);
+  padding-bottom: 9px;
+  color: #222121ab;;
   transition: 0.3s; /* Estilo de los enlaces del menú */
+  font-weight: 700; /* Aumenta el grosor del texto, puedes ajustar el valor */
+
+
+
 }
 
 .nav__btn {
