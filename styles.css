@@ -23,6 +23,8 @@
   background-size: cover; /* Hace que la imagen cubra toda la sección */
   color: #fff; /* Ajusta el color del texto si es necesario */
 }
+
+
 /* Estilos para la navegación */
 .nav__links {
   display: none;
@@ -41,8 +43,8 @@
 .nav__links.open {
   display: flex;
   transform: translateY(0);
-  z-index: 10; /* Asegúrate de que el menú esté por encima de otros elementos */
-  transition: transform 0.3s ease-in-out, z-index 0s 0s; /* Z-index cambia inmediatamente cuando el menú se abre */
+ /* z-index: 10; /* Asegúrate de que el menú esté por encima de otros elementos */
+  /*transition: transform 0.3s ease-in-out, z-index 0s 0s; /* Z-index cambia inmediatamente cuando el menú se abre */
 }
 
 
@@ -278,7 +280,7 @@ nav {
   max-width: var(--max-width);
   margin: auto;
   z-index: 9;
-  background-color: rgba(255, 255, 200, 0); /* Color semitransparente para el navbar */
+  background-color: rgba(133, 133, 93, 0); /* Color semitransparente para el navbar */
 }
 
 .nav__bar {
@@ -305,7 +307,7 @@ nav {
   align-items: center;
   flex-direction: column;
   gap: 2rem;
-  background-color: #61706e;
+  background-color: #d2dbda;
   transform: translateY(-100%);
   transition: 0.5s;
   z-index: -1; /* Estilo del menú desplegable de la navegación */
