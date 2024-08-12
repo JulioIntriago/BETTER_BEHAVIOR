@@ -7,7 +7,7 @@ document.getElementById('booking-form').addEventListener('submit', function(even
   const sessionType = document.getElementById('session-type').value;
 
   // Define el número de WhatsApp al que se enviará el mensaje
-  const phoneNumber = '+305 980-2606'; // Reemplaza con el número de teléfono (incluye código de país, pero sin el signo +)
+  const phoneNumber = '#'; // Reemplaza con el número de teléfono (incluye código de país, pero sin el signo +)
 
   // Crea el mensaje
   const message = `Hello, I would like to schedule a session.\nDate: ${sessionDate}\nHour: ${sessionTime}\nType of Inquiry: ${sessionType}`;
