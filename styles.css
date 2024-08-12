@@ -156,7 +156,7 @@
 /* Encabezado */
 .natural__environment__header {
   font-size: 2.5rem;
-  color: #090909; /* Color similar al usado en la imagen */
+  color: #5AB1B7; /* Color similar al usado en la imagen */
   margin-bottom: 20px;
 }
 
@@ -213,7 +213,7 @@
   font-size: 2.5rem;
   font-weight: 600;
   line-height: 3rem;
-  color: var(--text-dark); /* Estilo para los títulos de las secciones */
+  color: var(--primary-color); /* Estilo para los títulos de las secciones */
 }
 
 .section__description {
@@ -253,7 +253,7 @@ a {
 }
 
 .logo {
-  max-width: 120px; /* Estilo para el logo */
+  max-width: 110px; /* Estilo para el logo */
 }
 
 html,
@@ -613,7 +613,7 @@ nav {
 /* Encabezado de la sección */
 .six-step-header {
   font-size: 2.5rem;
-  color: #343a40;
+  color: #47959b;
   margin-bottom: 40px;
   line-height: 1.2;
 }
