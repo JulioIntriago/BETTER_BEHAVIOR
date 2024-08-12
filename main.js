@@ -75,8 +75,19 @@ ScrollReveal().reveal(".service__list li", {
 });
 // main.js
 
-
-
 menuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
+  navLinks.classList.toggle("open");
+
+  const isOpen = navLinks.classList.contains("open");
+  menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
+
+  // Ajustar el z-index cuando el menú esté abierto
+  navLinks.style.zIndex = isOpen ? "10" : "1";
 });
+
+navLinks.addEventListener("click", () => {
+  navLinks.classList.remove("open");
+  menuBtnIcon.setAttribute("class", "ri-menu-line");
+  navLinks.style.zIndex = "1"; // Asegura que el z-index se ajusta al cerrar el menú
+});
+
