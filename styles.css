@@ -8,7 +8,7 @@
   --white: #ffffff; /* Color blanco */
   --max-width: 1200px; /* Ancho máximo de la página */
   --secondary-color: #d4e0daef; /* Nuevo color secundario */
-  --accent-color: #F9D585; /* Nuevo color de acento */
+  --accent-color: #F9D585; /*f Nuevo color de acento */
 }
 
 * {
@@ -22,7 +22,9 @@
   background-size: cover; /* Hace que la imagen cubra toda la sección */
   color: #fff; /* Ajusta el color del texto si es necesario */
 }
-
+.navdiv{
+  position: absolute;
+}
 nav {
   position: fixed;
   isolation: isolate;
@@ -273,10 +275,11 @@ body {
 
 body {
   font-family: "Poppins", sans-serif; /* Tipografía principal del sitio */
+
 }
 
 .header {
-  background-image: url("assets/hero4.PNG");
+  /*background-image: url("assets/hero4.PNG");*/
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat; /* Estilo para el header con imagen de fondo */
@@ -294,7 +297,7 @@ nav {
 }
 
 .nav__bar {
-  padding: 1rem;
+  /*padding: 1rem;*/
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -605,11 +608,12 @@ nav {
 /* Contenedor principal para el grid */
 .six-step-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
+/*  grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
   gap: 20px;
   justify-items: center;
-  margin: 0 auto;
-  max-width: 1200px;
+  /*margin: 0 auto;
+  max-width: 1200px;*/
+  display: flex;
 }
 
 .six-step-item {
@@ -685,7 +689,7 @@ nav {
 /* Grid para los elementos */
 .six-step-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+  /*grid-template-columns: repeat(3, 1fr); /* Tres columnas */
   gap: 20px;
   justify-items: center; /* Center the items horizontally */
   margin: 0 auto; /* Center the grid container */
@@ -925,7 +929,7 @@ nav {
   }
 
   .nav__bar {
-    padding: 0;
+   padding: 0;
     background-color: transparent; /* Elimina el fondo de la barra de navegación en pantallas grandes */
   }
 
