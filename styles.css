@@ -283,6 +283,7 @@ body {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat; /* Estilo para el header con imagen de fondo */
+  background-color: rgba(113, 186, 189, 0.897);
 }
 
 nav {
@@ -430,6 +431,8 @@ nav {
   max-width: 450px;
   margin: auto;
   border-radius: 5px; /* Estilo de la imagen dentro de la sección "about" */
+  margin-bottom: 1rem; /* Espacio debajo de la imagen */
+
 }
 
 .room__grid {
@@ -850,7 +853,7 @@ nav {
 
 
 .footer {
-  background-color: var(--primary-color); /* Color de fondo para el pie de página */
+  background-color: rgba(113, 186, 189, 0.897);; /* Color de fondo para el pie de página */
 }
 
 .footer__container {
